@@ -1,0 +1,19 @@
+Pour accéder aux Machines :
+- Se connecter à : https://lab.ib-formation.fr
+- Utiliser les identifiants ci-dessous piur se connecter au server
+
+Session: 25202531
+Salle: Labo11
+
+
+Salle	Poste	Username				Password
+Labo11	Poste00	ib.51110008				f6L9YZhU
+Labo11	Poste01	franck.martin08				UJB9vhdY
+Labo11	Poste02	francois.giraudeau08			cwh7CPRX
+Labo11	Poste03	francois.varona08			ZpAY9mjF
+Labo11	Poste04	florence.hauw08				k4VDzfgj
+Labo11	Poste05	theophane.zarrin-kafche08		DrHvY6kK
+Labo11	Poste06	najet.gharrafi08			x8phdrMv
+Labo11	Poste07	theophane.zarrin-kafche08		DrHvY6kK
+
+Une fois face à la machine virtuelle, pour la session ib le mot de passe est Pa55w.rd

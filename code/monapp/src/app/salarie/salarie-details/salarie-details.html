@@ -1,0 +1,16 @@
+<h3>Employé</h3>
+<dl>
+  <dt>Nom</dt>
+  <dd>{{salarie.nom | uppercase }}</dd>
+
+  <dt>Prénom</dt>
+  <dd>{{salarie.prenom}}</dd>
+
+  <dt>Date de naissance</dt>
+  <dd>{{salarie.dateNaissance | date : 'dd/MM/yyyy'}}</dd>
+
+  <dt>Salaire</dt>
+  <dd>{{salarie.salaire | number :'.2-3'}}</dd>
+    <dd>{{salarie.salaire | currency : 'EUR'}}</dd>
+        <dd>{{salarie.salaire | percent}}</dd>
+</dl>
