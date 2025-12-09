@@ -1,0 +1,9 @@
+[{"name":"Alice", "surname":"Dupont",  "salary":{
+    "amount":5000,"periodicity":"monthly"
+    }, "birthDate":"1985-06-20", "cool":true},
+ {"name":"Bob", "surname":"Martin",  "salary":{
+    "amount":60000,"periodicity":"yearly"
+    }, "birthDate":"1978-11-02", "cool":false},
+ {"name":"Charlie", "surname":"Durand",  "salary":{
+    "amount":3000,"periodicity":"monthly"
+    }, "birthDate":"1990-01-15"}]
