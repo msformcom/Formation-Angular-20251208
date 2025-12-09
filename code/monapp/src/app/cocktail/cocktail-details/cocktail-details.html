@@ -1,0 +1,15 @@
+<h1>Détail d'un cocktail</h1>
+<dl>
+    <dt>Libellé</dt>
+    <dd>{{cocktail.libelle | titlecase}}</dd>
+    <dt>Composition</dt>
+    <dd>{{cocktail.composition}}</dd>
+    <dt>Prix</dt>
+    <dd>{{cocktail.prix | number : '.2-2'}}</dd>
+    @if(cocktail.degreAlcool != undefined){
+        <dt>Degré d'alcool</dt>
+        <dd>{{cocktail.degreAlcool}}</dd>
+        <!--<dd>{{cocktail.degreAlcool ?? "Inconnu"}}</dd>-->
+    }
+
+</dl>

@@ -3,10 +3,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Employe } from '../models/employe';
 import { SalarieDetails } from "./salarie/salarie-details/salarie-details";
+import { Cocktail } from '../models/cocktail';
+import { CocktailDetails } from './cocktail/cocktail-details/cocktail-details';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UpperCasePipe, SalarieDetails],
+  imports: [RouterOutlet,  SalarieDetails, CocktailDetails],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -22,6 +24,11 @@ export class App {
     ];
   
     // Afficher un cocktail dans l'interface libele : "Margarita", composition : "Tekila, jus de citron, grenadine"
-    boisson={libelle:"Margarita",composition:"Tekila,citron et grenadine"};
-
+    boissons: Cocktail[] = [
+      { libelle: "Margarita", composition: "Tekila, jus de citron, grenadine", prix: 8.5 },
+      { libelle: "Pina Colada", composition: "Rhum, jus d'ananas, lait de coco", prix: 9.0, degreAlcool: 12 },
+      { libelle: "Virgin Mojito", composition: "Jus de citron vert, menthe, eau gazeuse", prix: 6.0 },
+      { libelle: "Cosmopolitan", composition: "Vodka, triple sec, jus de cranberry, jus de citron vert", prix: 10.0, degreAlcool: 14},
+      { libelle: "Bloody Mary", composition: "Vodka, jus de tomate, épices", prix: 9.5, degreAlcool: 13 }
+    ];
   }
