@@ -1,35 +1,28 @@
-<h1>Mon application</h1>
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mon application</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLinkActive="active" routerLink="/accueil">Accueil</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/apropos">A Propos</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/employe">Salaries</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
+  <!-- routerLink => correspond à la route à suivre dans a...routes.ts --
 
+  <!-- @for(c of boissons; track c){
+  <app-cocktail-details [cocktail]="c"></app-cocktail-details>
+  } -->
 
-<!-- Boucle permettant de répéter des balises sur un tableau  -->
+  <router-outlet></router-outlet>
 
-@if(erreurChargementEmployes != undefined){
-  <p class="erreur">{{erreurChargementEmployes}}</p>
-} @else {
-  @if(employes == undefined ){
-    <p>Chargement des salariés...</p>
-  }
-  @else {
-    @for(e of employes;track e){
-    <!-- J'affiche le salarié e -->
-    <app-salarie-details [salarie]="e"></app-salarie-details>
-    }
-  }
-}
-
-
-
-@for(c of boissons; track c){
-<app-cocktail-details [cocktail]="c"></app-cocktail-details>
-}
-
-
-
-
-
-
-
-
-
-<router-outlet></router-outlet>
+  <div>Copyright Moi 2025</div>
+</div>

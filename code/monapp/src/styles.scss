@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/* J'importe ici la bibliothèque de style de bootstrap */
+@use "../node_modules/bootstrap/scss/bootstrap.scss";
+
+h1{
+    color:red;
+}
+
+.nav-link{
+    border: red solid 2px;
+    margin-right: 4px;
+    border-radius: 10px;;
+}
+.nav-link.active{
+    background-color: pink;;
+}
