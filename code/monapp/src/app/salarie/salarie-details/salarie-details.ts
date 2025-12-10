@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Employe } from '../../../models/employe';
 import { CurrencyPipe, DatePipe, DecimalPipe, PercentPipe, UpperCasePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { SalarieService } from '../../../services/salarie-service';
 
 @Component({
   selector: 'app-salarie-details',
@@ -9,7 +11,19 @@ import { CurrencyPipe, DatePipe, DecimalPipe, PercentPipe, UpperCasePipe } from 
   styleUrl: './salarie-details.scss',
 })
 export class SalarieDetails {
-    // Le @Input permet de déléguer l'initialisation de salarie au niveau de la balise
-    @Input()
-    salarie!: Employe;
+
+    // ActivatedRoute est un objet que j'obtiens de l'injection de dépendance
+    // qui contient des informations sur la route en cours
+    activatedRoute=inject(ActivatedRoute);
+    salarieService=inject(SalarieService);
+    
+    async ngOnInit(){
+        // Aller chercher l'id de l'employé à afficher dans l'URL
+        const idSalarie=this.activatedRoute.snapshot.params['id'];
+        // J'utilise le service pour récupérer l'employé par son id
+        // Asynchronisme => le salarie est = undefined tant que la promesse n'est pas résolue
+        this.salarie=await this.salarieService.getSalarieParId(idSalarie);
+        
+    }
+    salarie?: Employe;
 }

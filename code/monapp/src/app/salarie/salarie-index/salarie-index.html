@@ -9,8 +9,8 @@
   @else {
     <ul>
         @for(e of employes;track e){
-        <!-- J'affiche le salarié e -->
-        <li>{{e.libelle}}</li>
+        <!-- Je dirige l'utilisateur vers la route qui affiche le salarie par son id -->
+        <li routerLink="/employe/details/{{e.id}}">{{e.libelle}}</li>
         }        
     </ul>
 

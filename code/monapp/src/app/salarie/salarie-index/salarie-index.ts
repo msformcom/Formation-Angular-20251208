@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { Employe } from '../../../models/employe';
 import { SalarieService } from '../../../services/salarie-service';
 import { ListItem } from '../../../models/list-item';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-salarie-index',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './salarie-index.html',
   styleUrl: './salarie-index.scss',
 })

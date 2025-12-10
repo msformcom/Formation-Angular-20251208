@@ -1,4 +1,9 @@
 <h3>Employé</h3>
+@if(salarie == undefined){
+<div class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+} @else {
 <dl>
   <dt>Nom</dt>
   <dd>{{salarie.nom | uppercase }}</dd>
@@ -11,6 +16,7 @@
 
   <dt>Salaire</dt>
   <dd>{{salarie.salaire | number :'.2-3'}}</dd>
-    <dd>{{salarie.salaire | currency : 'EUR'}}</dd>
-        <dd>{{salarie.salaire | percent}}</dd>
+  <dd>{{salarie.salaire | currency : 'EUR'}}</dd>
+  <dd>{{salarie.salaire | percent}}</dd>
 </dl>
+}

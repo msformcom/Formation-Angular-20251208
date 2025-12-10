@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Mojito",
+        "ingredients": "Rhum, menthe, sucre, citron vert, eau gazeuse",
+        "price": 7.5,
+        "alcoholDegree": 10
+    },
+    {
+        "label": "Caipirinha",
+        "ingredients": "Cachaça, citron vert, sucre",
+        "price": 8.0,
+        "alcoholDegree": 12
+    },
+    {
+        "label": "Daiquiri",
+        "ingredients": "Rhum blanc, jus de citron vert, sucre",
+        "price": 9.0,
+        "alcoholDegree": 14
+    },
+    {
+        "label": "Mai Tai",
+        "ingredients": "Rhum blanc, rhum ambré, triple sec, jus de citron vert, orgeat",
+        "price": 10.0,
+        "alcoholDegree": 15
+            }
+]
