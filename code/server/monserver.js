@@ -4,7 +4,10 @@
 // import nomvariable from 'nomdupackage';
 
 // Avec nodejs on utilise 'require' pour importer un package
+// npm i express
 const express1 = require('express');
+// npm i cors
+const cors=require('cors');
 
 // Creation d'un server web
 const app = express1();
@@ -22,6 +25,12 @@ let employes=[{id:1,name:"Alice", surname:"Dupont",  salary:{
 
 // Mettre à disposition dess clients le contenu du dossier 'wwwroot'
 app.use(express1.static('wwwroot'));
+
+// Activer le CORS pour toutes les requêtes
+// CORS = Cross Origin Resource Sharing
+// Par defaut, si mon server est à l'adresse http://localhost:4201
+// seuls les clients hébergés sur la même adresse peuvent consommer mes apis
+app.use(cors(["http://localhost:4200"]));
 
 // Mise en place de la réponse à l'url /api/salarie
 app.get("/api/salarie",(req,res)=>{

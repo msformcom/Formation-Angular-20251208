@@ -4,5 +4,5 @@ export interface Employe{
     prenom:string;
     dateNaissance:Date;
     salaire:number;
-    sympa?:boolean;
+    sympa:boolean;
 }

@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Employe } from '../../../models/employe';
 import { SalarieService } from '../../../services/salarie-service';
+import { ListItem } from '../../../models/list-item';
 
 @Component({
   selector: 'app-salarie-index',
@@ -21,6 +22,6 @@ export class SalarieIndex {
   }
 
   erreurChargementEmployes?:string;
-  employes?:Employe[];
+  employes?:ListItem[];
 
 }
