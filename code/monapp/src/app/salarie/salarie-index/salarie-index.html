@@ -1,0 +1,18 @@
+<h3>Liste des salariés</h3>
+
+@if(erreurChargementEmployes != undefined){
+  <p class="erreur">{{erreurChargementEmployes}}</p>
+} @else {
+  @if(employes == undefined ){
+    <p>Chargement des salariés...</p>
+  }
+  @else {
+    <ul>
+        @for(e of employes;track e){
+        <!-- J'affiche le salarié e -->
+        <li>{{e.nom}} {{e.prenom}}</li>
+        }        
+    </ul>
+
+  }
+}

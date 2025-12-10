@@ -3,13 +3,25 @@
 
 
 <!-- Boucle permettant de répéter des balises sur un tableau  -->
-@for(e of employes;track e){
-  <!-- J'affiche le salarié e -->
-  <app-salarie-details [salarie]="e"></app-salarie-details>
+
+@if(erreurChargementEmployes != undefined){
+  <p class="erreur">{{erreurChargementEmployes}}</p>
+} @else {
+  @if(employes == undefined ){
+    <p>Chargement des salariés...</p>
+  }
+  @else {
+    @for(e of employes;track e){
+    <!-- J'affiche le salarié e -->
+    <app-salarie-details [salarie]="e"></app-salarie-details>
+    }
+  }
 }
 
+
+
 @for(c of boissons; track c){
-  <app-cocktail-details [cocktail]="c"></app-cocktail-details>
+<app-cocktail-details [cocktail]="c"></app-cocktail-details>
 }
 
 

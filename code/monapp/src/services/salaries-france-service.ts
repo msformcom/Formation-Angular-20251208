@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { SalarieService } from './salarie-service';
 import { Employe } from '../models/employe';
 import { EmployeDTO } from '../dtos/employe-dto';
+import { delay } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,8 @@ export class SalariesFranceService implements SalarieService {
     var objetRenvoye = (await reponseServer.json()) as EmployeDTO[]; // extraction du json
     // Je prend chaque dto envoyé par le server 
     // et je le transforme en Employe
+    //await new Promise(resolve => setTimeout(resolve, 5000))
+    //throw new Error("Erreur de connexion au serveur des salaires");
     var employes: Employe[] = objetRenvoye.map(dto => {
       return {
         nom: dto.surname,
